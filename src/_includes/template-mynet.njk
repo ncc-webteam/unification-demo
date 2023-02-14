@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "_static_components/head.njk" %}
+  
+  <link rel="stylesheet" href="{{ '/css/mynet-styles.css' | url }}">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>myNet</h1>
+  </header>
+  {% block main %}{% endblock %}
+</body>
+</html>
