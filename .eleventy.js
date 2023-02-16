@@ -18,6 +18,6 @@ module.exports = function(eleventyConfig) {
       input: "src",
       output: "public"
     },
-    pathPrefix: "/public/"
+    pathPrefix: "/public/unification-demo/"
   };
 };
