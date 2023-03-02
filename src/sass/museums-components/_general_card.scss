@@ -1,0 +1,297 @@
+// Define the required variables first, then import the component styles.
+// The components will have their necessary variables listed at the top of the stylesheet.
+$primary-theme: #006666;
+
+@import "../base-components/general_card";
+
+.card.event-card {
+  box-shadow: none;
+  background-color: transparent;
+
+  .card-body {
+    background-color: transparent;
+    padding: 20px 0 0 0;
+
+    .card-title {
+      font-weight: 800;
+    }
+
+    .card-text {
+      color: #767676;
+    }
+
+    .card-link {
+      background-color: #006cf4;
+      color: white;
+      border-radius: 6px;
+      display: block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      width: 100%;
+
+      &:hover {
+        background-color: $link-colour-hover;
+      }
+      &:focus {
+        text-decoration: underline;
+        color: $focus-text-colour;
+        background-color: $focus-colour;
+        outline: solid $focus-text-colour 2px;
+        outline-offset: -2px;
+      }
+    }
+  }
+
+  &:hover {
+    .img-wrapper img {
+      transform: none;
+    }
+    .card-title {
+      text-decoration: none;
+    }
+  }
+
+  &:focus-within {
+    background-color: transparent;
+    outline: solid 4px $focus-colour;
+    transition: none;
+    box-shadow: none;
+
+    img {
+      transform: none;
+    }
+
+    .card-text {
+      color: $focus-text-colour;
+    }
+    .card-location {
+      color: $focus-text-colour;
+    }
+    .card-date {
+      color: $focus-text-colour;
+    }
+    .card-extra-info {
+      color: $focus-text-colour;
+    }
+    .flair {
+      color: white;
+      background-color: $focus-text-colour;
+    }
+
+    .card-title a {
+      color: $focus-text-colour;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+.card.museum-card {
+  border-radius: 8px;
+
+  .type {
+    display: none;
+  }
+
+  .date-overlay {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: $object-shadow;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .month {
+      padding: 0px 20px;
+      background-color: #d82929;
+      color: $light;
+      font-weight: 700;
+      text-align: center;
+    }
+    .day {
+      padding: 4px 16px;
+      background-color: $light;
+      color: #767676;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+
+  .card-body {
+    .card-title {
+      margin: 0px 0px 5px 0px;
+      order: 1;
+  
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.375rem;
+      }
+    }
+    .card-location {
+      margin: 0;
+      font-weight: 700;
+      order: 0;
+    }
+    .card-date {
+      margin: 0;
+      font-weight: 600;
+      order: 0;
+    }
+    .card-text {
+      color: #767676;
+      font-weight: 500;
+      margin: 0px 0px 5px 0px;
+      order: 3;
+    }
+    .flair {
+      font-size: 1.5rem;
+      color: $dark;
+      background-color: transparent;
+      padding: 0;
+      font-weight: 800;
+      margin-top: auto;
+      order: 4;
+    }
+    .card-extra-info {
+      display: none;
+      order: 2;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+    &:focus-within {
+      box-shadow: none;
+    }
+
+    .img-wrapper {
+      max-height: 84px;
+    }
+
+    .card-body {
+      padding: 5px 10px 10px 10px;
+
+      .card-location {
+        font-size: 0.875rem;
+      }
+      .card-date {
+        font-size: 0.875rem;
+      }
+      .card-text {
+        font-size: 0.875rem;
+      }
+      .card-title {
+        margin-bottom: 0px;
+        font-size: 1.25rem;
+      }
+      .flair {
+        margin: 0px;
+        font-size: 1.25rem;
+      }
+    }
+  }
+  &:focus-within {
+    .card-body {
+      .card-text {
+        color: $focus-text-colour;
+      }
+    }
+  }
+}
+.card.museum-card.time-and-tide {
+  .card-location {
+    color: #161e69;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.cromer {
+  .card-location {
+    color: #0070a5;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.elizabethan {
+  .card-location {
+    color: #cf171d;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.strangers-hall {
+  .card-location {
+    color: #b32017;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.lynn {
+  .card-location {
+    color: #80623c;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.gressenhall {
+  .card-location {
+    color: #597730;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.ancient-house {
+  .card-location {
+    color: #4c7285;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}
+.card.museum-card.online {
+  .card-location {
+    color: $primary;
+  }
+  &:focus-within {
+    .card-location {
+      color: $focus-text-colour;
+    }
+  }
+}

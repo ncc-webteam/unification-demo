@@ -1,0 +1,52 @@
+{% macro generalcard(title, location, date, flair, extra, text, img, link, options, id, month, day, type) %}
+
+<div class="card {{options}} h-100 {% if title|length %}{% else %}nohover{% endif %}" data-component="72">
+
+  {% if 'museum-card' in options %}
+    <div class="date-overlay">
+      <div aria-hidden="true" id="result-{{id}}-month" class="month">{{month}}</div>
+      <div aria-hidden="true" id="result-{{id}}-day" class="day">{{day}}</div>
+    </div>
+    <div aria-hidden="true" id="result-{{id}}-type" class="type">{{type}}</div>
+  {% endif %}
+
+  {% if img|length %}
+  <div class="img-wrapper ratio ratio-16x9">
+    <img src="/unification-demo/public/img/{{img}}" class="card-img-top" alt="">
+  </div>
+  {% else %}
+  <div class="img-wrapper ratio ratio-16x9">
+    <img src="/museums-events/public/img/museums-events/museums-placeholder.jpg" class="card-img-top" alt="">
+  </div>
+  {% endif %}
+
+  <div class="card-body">
+
+    {% if title|length %}
+    <h3 class="card-title h3"><a aria-label="{{title}} on {{date}}" id="result-{{id}}-title" class="stretched-link" href="{{link}}">{{ title }}</a></h3>
+    {% else %}{% endif %}
+
+    {% if location|length %}
+    <p id="result-{{id}}-location" class="card-location">{{ location }}</p>
+    {% else %}{% endif %}
+
+    {% if date|length %}
+    <p class="card-date">{{ date }}</p>
+    {% else %}{% endif %}
+
+    {% if flair|length %}
+    <span class="flair flair-full">{{ flair }}</span>
+    {% else %}{% endif %}
+
+    {% if extra|length %}
+    <p id="result-{{id}}-audience" class="card-extra-info">{{ extra }}</p>
+    {% else %}{% endif %}
+
+    {% if text|length %}
+    <p id="result-{{id}}-desc" class="card-text">{{ text }}</p>
+    {% else %}{% endif %}
+
+  </div>
+</div>
+
+{% endmacro %}

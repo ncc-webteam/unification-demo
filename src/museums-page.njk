@@ -1,7 +1,22 @@
 {% extends "template-museums.njk" %}
+{% import "_pattern_macros/general_card-museums.njk" as generalcard %}
+
 {% block main %}
   <p>This is the Museums demo</p>
 
+  <div class="container my-5">
+    <h1 class="h3">General card Norfolk example:</h1>
+
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-md-6 col-lg-4">
+          {{ generalcard.generalcard("Fighting Gallery Tour", 'Norwich Castle • Norwich', 'Friday 1 April 2022 • 13:00 - 13:30', 'from £2.80', 'All', 'Join our costumed Knight for a journey through the castle’s defensive past. Check out the medieval graffiti and stonemason’s remarks, learn how the castle survived under siege, and get behind the scenes as we take you into the mysterious fighting gallery.', 'museums-events/norwich-castle.jpg', '/museums-events/public/example-event/', 'card-light museum-card norwich-castle', '10', 'Apr', '1', 'Tours') }}
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+          {{ generalcard.generalcard("Creepy Cromer", 'Cromer Museum • Cromer', 'Wednesday 26 October 2022 • 12:00 - 12:30', 'Free', 'All', 'Get in the mood for Halloween, with this creepy craft event. Make decorations to take home and hear spooky local stories. No activities between noon and 1pm.', 'museums-events/workshops.jpg', '/museums-events/public/example-event/', 'card-light museum-card cromer', '13', 'Oct', '26', 'Family activities') }}
+      </div>
+    </div>
+  </div>
+  
   <a href="{{ '/' | url }}">Link to Norfolk demo</a>
   <a href="{{ '/mynet-page/' | url }}">Link to myNet demo</a>
 {% endblock %}

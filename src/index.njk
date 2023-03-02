@@ -1,6 +1,22 @@
 {% extends "template-norfolk.njk" %}
+{% import "_pattern_macros/general_card-norfolk.njk" as generalcard %}
+
 {% block main %}
   <p>This is the Norfolk demo</p>
+
+  <div class="container my-5">
+    <h1 class="h3">General card Norfolk example:</h1>
+
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-md-6 col-lg-4">
+          {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded') }}
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+          {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded card-light') }}
+      </div>
+    </div>
+  </div>
+  
 
   <a href="{{ '/museums-page/' | url }}">Link to Museums demo</a>
   <a href="{{ '/mynet-page/' | url }}">Link to myNet demo</a>

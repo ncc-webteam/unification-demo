@@ -11292,6 +11292,402 @@ header .btn-check:checked {
   outline: none;
 }
 
+.card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 0px;
+  overflow: hidden;
+  background-color: #212529;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    transition: none;
+  }
+}
+.card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card .img-wrapper {
+  overflow: hidden;
+  object-fit: contain;
+}
+.card .card-location {
+  color: #d2982c;
+  font-weight: 700;
+  margin: 5px 0px;
+}
+.card .card-date {
+  font-size: 1rem;
+  color: #adb5bd;
+  margin: 5px 0px;
+}
+.card .card-extra-info {
+  font-size: 1rem;
+  color: #f8f9fa;
+  margin: 5px 0px;
+}
+.card .card-title {
+  margin: 0px 0px 5px 0px;
+}
+.card .card-title a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.375rem;
+  color: #f8f9fa;
+}
+.card .flair {
+  padding: 4px 10px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  color: #f8f9fa;
+}
+.card .flair-full {
+  background-color: #BE4600;
+}
+.card .flair-available {
+  color: #BE4600;
+}
+.card .card-text {
+  margin: 5px 0px 0px 0px;
+  color: #adb5bd;
+  font-weight: 600;
+}
+.card img {
+  border-radius: 0px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  object-fit: cover;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card img {
+    animation: none;
+    transition: none;
+  }
+}
+.card:hover {
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.card:hover .card-title {
+  text-decoration: underline;
+}
+.card:focus-within {
+  background-color: #ffdd00;
+  outline: solid 4px #ffdd00;
+  transition: none;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+}
+.card:focus-within img {
+  transform: scale(1.1);
+}
+.card:focus-within .card-text {
+  color: #0b0c0c;
+}
+.card:focus-within .card-location {
+  color: #0b0c0c;
+}
+.card:focus-within .card-date {
+  color: #0b0c0c;
+}
+.card:focus-within .card-extra-info {
+  color: #0b0c0c;
+}
+.card:focus-within .flair {
+  color: white;
+  background-color: #0b0c0c;
+}
+.card:focus-within .card-title a {
+  color: #0b0c0c;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+}
+
+.nohover:hover {
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+}
+.nohover:hover img {
+  transform: none;
+}
+.nohover:hover .card-title {
+  text-decoration: none;
+}
+
+.card-rounded {
+  border-radius: 10px;
+}
+
+.card-light {
+  background-color: white;
+}
+.card-light .card-location {
+  color: #be4600;
+}
+.card-light .card-date {
+  color: #6c757d;
+}
+.card-light .card-extra-info {
+  color: #6c757d;
+}
+.card-light .card-title a {
+  color: #212529;
+}
+.card-light .card-text {
+  color: #495057;
+}
+
+.card.event-card {
+  box-shadow: none;
+  background-color: transparent;
+}
+.card.event-card .card-body {
+  background-color: transparent;
+  padding: 20px 0 0 0;
+}
+.card.event-card .card-body .card-title {
+  font-weight: 800;
+}
+.card.event-card .card-body .card-text {
+  color: #767676;
+}
+.card.event-card .card-body .card-link {
+  background-color: #006cf4;
+  color: white;
+  border-radius: 6px;
+  display: block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+.card.event-card .card-body .card-link:hover {
+  background-color: #1a10f0;
+}
+.card.event-card .card-body .card-link:focus {
+  text-decoration: underline;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  outline: solid #0b0c0c 2px;
+  outline-offset: -2px;
+}
+.card.event-card:hover .img-wrapper img {
+  transform: none;
+}
+.card.event-card:hover .card-title {
+  text-decoration: none;
+}
+.card.event-card:focus-within {
+  background-color: transparent;
+  outline: solid 4px #ffdd00;
+  transition: none;
+  box-shadow: none;
+}
+.card.event-card:focus-within img {
+  transform: none;
+}
+.card.event-card:focus-within .card-text {
+  color: #0b0c0c;
+}
+.card.event-card:focus-within .card-location {
+  color: #0b0c0c;
+}
+.card.event-card:focus-within .card-date {
+  color: #0b0c0c;
+}
+.card.event-card:focus-within .card-extra-info {
+  color: #0b0c0c;
+}
+.card.event-card:focus-within .flair {
+  color: white;
+  background-color: #0b0c0c;
+}
+.card.event-card:focus-within .card-title a {
+  color: #0b0c0c;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+}
+
+.card.museum-card {
+  border-radius: 8px;
+}
+.card.museum-card .type {
+  display: none;
+}
+.card.museum-card .date-overlay {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card.museum-card .date-overlay .month {
+  padding: 0px 20px;
+  background-color: #d82929;
+  color: #f8f9fa;
+  font-weight: 700;
+  text-align: center;
+}
+.card.museum-card .date-overlay .day {
+  padding: 4px 16px;
+  background-color: #f8f9fa;
+  color: #767676;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.card.museum-card .card-body .card-title {
+  margin: 0px 0px 5px 0px;
+  order: 1;
+}
+.card.museum-card .card-body .card-title a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+.card.museum-card .card-body .card-location {
+  margin: 0;
+  font-weight: 700;
+  order: 0;
+}
+.card.museum-card .card-body .card-date {
+  margin: 0;
+  font-weight: 600;
+  order: 0;
+}
+.card.museum-card .card-body .card-text {
+  color: #767676;
+  font-weight: 500;
+  margin: 0px 0px 5px 0px;
+  order: 3;
+}
+.card.museum-card .card-body .flair {
+  font-size: 1.5rem;
+  color: #212529;
+  background-color: transparent;
+  padding: 0;
+  font-weight: 800;
+  margin-top: auto;
+  order: 4;
+}
+.card.museum-card .card-body .card-extra-info {
+  display: none;
+  order: 2;
+}
+@media (max-width: 575.98px) {
+  .card.museum-card {
+    box-shadow: none;
+  }
+  .card.museum-card:hover {
+    box-shadow: none;
+  }
+  .card.museum-card:focus-within {
+    box-shadow: none;
+  }
+  .card.museum-card .img-wrapper {
+    max-height: 84px;
+  }
+  .card.museum-card .card-body {
+    padding: 5px 10px 10px 10px;
+  }
+  .card.museum-card .card-body .card-location {
+    font-size: 0.875rem;
+  }
+  .card.museum-card .card-body .card-date {
+    font-size: 0.875rem;
+  }
+  .card.museum-card .card-body .card-text {
+    font-size: 0.875rem;
+  }
+  .card.museum-card .card-body .card-title {
+    margin-bottom: 0px;
+    font-size: 1.25rem;
+  }
+  .card.museum-card .card-body .flair {
+    margin: 0px;
+    font-size: 1.25rem;
+  }
+}
+.card.museum-card:focus-within .card-body .card-text {
+  color: #0b0c0c;
+}
+
+.card.museum-card.time-and-tide .card-location {
+  color: #161e69;
+}
+.card.museum-card.time-and-tide:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.cromer .card-location {
+  color: #0070a5;
+}
+.card.museum-card.cromer:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.elizabethan .card-location {
+  color: #cf171d;
+}
+.card.museum-card.elizabethan:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.strangers-hall .card-location {
+  color: #b32017;
+}
+.card.museum-card.strangers-hall:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.lynn .card-location {
+  color: #80623c;
+}
+.card.museum-card.lynn:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.gressenhall .card-location {
+  color: #597730;
+}
+.card.museum-card.gressenhall:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.ancient-house .card-location {
+  color: #4c7285;
+}
+.card.museum-card.ancient-house:focus-within .card-location {
+  color: #0b0c0c;
+}
+
+.card.museum-card.online .card-location {
+  color: #0d6efd;
+}
+.card.museum-card.online:focus-within .card-location {
+  color: #0b0c0c;
+}
+
 p {
   color: blue;
 }
