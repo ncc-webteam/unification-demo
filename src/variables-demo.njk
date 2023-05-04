@@ -1,0 +1,29 @@
+{% extends "template-norfolk.njk" %}
+{% import "_pattern_macros/general_card-norfolk.njk" as generalcard %}
+
+{% block main %}
+  <p>This is the Bootstrap variables demo</p>
+
+  <div class="container my-5">
+
+    <h1 class="h3">Colours</h1>
+    <p>'Primary' colour has been changed to Norfolk teal (#006666)</p>
+    <p>'Secondary' colour has been changed to Museums blue (#00235D)</p>
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+
+  </div>
+  
+
+  <a href="{{ '/museums-page/' | url }}">Link to Museums demo</a>
+  <a href="{{ '/mynet-page/' | url }}">Link to myNet demo</a>
+{% endblock %}
